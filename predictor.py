@@ -264,9 +264,17 @@ def plotPredictions(player, predictionsAVG, predictionsOBP, N):
 
 def main():
 	'''
+	The main program. Uses data from the Lahman 2016 database to predict the
+	future performance of a player using Bayesian methods. The player's AVG and
+	OBP are compared to other players during the first N years of their careers,
+	and weightings are drawn form these comparisons to create predictions for
+	subsequent years.
 
+	TODO: Add SLG and WAR predictions.
 	'''
 
+	# Change these parameters. The playerToTest should be the player's playerID,
+	# which is the player's ID on baseball-reference.com
 	playerToTest = 'troutmi01'
 	N = 4
 	abThreshold = 100
